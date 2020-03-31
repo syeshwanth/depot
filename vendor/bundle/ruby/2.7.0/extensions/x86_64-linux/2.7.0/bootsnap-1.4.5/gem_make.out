@@ -1,0 +1,26 @@
+current directory: /home/sy/dev/depot/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.5/ext/bootsnap
+/usr/bin/ruby -I /usr/lib/ruby/2.7.0 -r ./siteconf20200327-12129-cm9xj1.rb extconf.rb
+creating Makefile
+
+current directory: /home/sy/dev/depot/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/sy/dev/depot/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘prot_input_to_storage’:
+bootsnap.c:810:7: warning: passing argument 3 of ‘rb_rescue2’ from incompatible pointer type [-Wincompatible-pointer-types]
+  810 |       rescue_input_to_storage, Qnil,
+      |       ^~~~~~~~~~~~~~~~~~~~~~~
+      |       |
+      |       VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+In file included from /usr/include/ruby-2.7.0/ruby.h:33,
+                 from bootsnap.c:15:
+/usr/include/ruby-2.7.0/ruby/ruby.h:1988:40: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+ 1988 | VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+      |                                        ^~~~~~~~~~~~~~~~~~~~~
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/sy/dev/depot/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200327-12129-15s4zx1/bootsnap
