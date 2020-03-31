@@ -45,4 +45,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to line_items_url
   end
+
+  test "should create line item and redirect to cart" do
+  end
 end
